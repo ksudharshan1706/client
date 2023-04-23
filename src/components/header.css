@@ -20,3 +20,80 @@ header nav h1{
 header nav .avtar{
     cursor: pointer;
 }
+
+
+.header-middle {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* padding: 0px 10px; */
+  }
+  
+  .header-middle > .header-search-container {
+    display: flex;
+    padding: 10px 10px;
+    margin-right: 10px;
+    background-color: #fff;
+    border-radius: 3px;
+    border: 1px solid rgba(34, 34, 34, 0.233);
+  }
+  
+  .header-search-container > input {
+    border: none;
+    width: 100%;
+    margin-left: 5px;
+    outline: none;
+  }
+  
+  .header-search-container > .MuiSvgIcon-root {
+    color: #ccc;
+  }
+  
+  
+  .header-right {
+    display: flex;
+  }
+  
+  .header-right > .header-right-container {
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+  }
+  
+  .header-right-container > .MuiSvgIcon-root {
+    margin: 0px 5px;
+    color: rgba(0, 0, 0, 0.534);
+    padding: 10px 5px;
+    cursor: pointer;
+  }
+  
+  .header-right-container > .MuiSvgIcon-root:hover {
+    background-color: #ddd;
+    color: #000;
+  }
+  
+  .header-right-container > img {
+    width: 20px;
+    margin: 0 10px;
+    cursor: pointer;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .header-middle {
+      display: none;
+    }
+  }
+  
+  @media screen and (min-width: 768px) {
+    .header-middle {
+      width: calc(20 * 2vw);
+    }
+  
+    .header-search-container {
+      width: 100%;
+    }
+  }
+
+  .btn{
+    color: salmon;
+  }

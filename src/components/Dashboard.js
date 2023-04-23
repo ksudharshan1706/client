@@ -30,7 +30,7 @@ const Dashboard = () => {
     } else {
       console.log("user verify");
       setLoginData(data);
-      history("/dash");
+      history("/stack");
     }
   };
 
