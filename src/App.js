@@ -11,6 +11,7 @@ import ViewQuestion from "./components/ViewQuestion/ViewQuestion";
 import Stackoverflow from "./components/Stackoverflow";
 import Question from "./components/Add-Question/Question";
 import { LoginContext } from "./components/ContextProvider/Context";
+import Profile from "./components/Profile";
 
 function App() {
   const [data, setData] = useState(false);
@@ -57,6 +58,7 @@ function App() {
             <Route path="/" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="/dash" element={<Dashboard />} />
+            <Route path="/profile" element={<Profile />} />
             <Route path="/register" element={<Register />} />
             <Route path="/stack" element={<Stackoverflow />} />
             <Route path="/add-question" element={<Question />} />

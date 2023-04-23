@@ -26,9 +26,9 @@ const Header = () => {
 
   const logoutuser = async () => {
     let token = localStorage.getItem("usersdatatoken");
-    const res = await fetch(`http://localhost:3000/logout`, {
-      // let API = API.replace("https", "http");
-      // const res = await fetch(`${API}/logout`, {
+    // const res = await fetch(`http://localhost:3000/logout`, {
+
+    const res = await fetch(`${API}/logout`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -39,7 +39,10 @@ const Header = () => {
     })
       // .then((res) => console.log(res))
       .catch((err) => {
+        history("/");
         console.log(err.message);
+        localStorage.removeItem("usersdatatoken");
+        setLoginData(false);
       });
 
     const data = await res.json();
@@ -52,11 +55,12 @@ const Header = () => {
       history("/");
     } else {
       console.log("error");
+      history("/");
     }
   };
 
   const goDash = () => {
-    history("/dash");
+    history("/profile");
   };
 
   const goError = () => {
