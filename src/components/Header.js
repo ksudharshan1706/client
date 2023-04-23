@@ -140,6 +140,13 @@ const Header = () => {
                 </MenuItem>
                 <MenuItem
                   onClick={() => {
+                    history("/stack");
+                  }}
+                >
+                  Home
+                </MenuItem>
+                <MenuItem
+                  onClick={() => {
                     logoutuser();
                     handleClose();
                   }}
